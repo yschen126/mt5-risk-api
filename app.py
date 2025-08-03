@@ -8,7 +8,7 @@ app = Flask(__name__)
 def home():
     return 'MT5 Risk API is running.'
 
-@app.route('/mt5status', methods=['POST'])
+@app.route('/check', methods=['POST'])
 def check_mt5_status():
     data = request.get_json()
     login_id = int(data.get('login_id'))
